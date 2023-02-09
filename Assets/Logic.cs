@@ -21,6 +21,7 @@ public class Logic
     public Logic(int[,] inputField)
     {
         pToCheck.Enqueue(start);
+        field[start.x, start.y] = 1;
     }
 
     public void OneStep()
@@ -32,7 +33,7 @@ public class Logic
         }
         else
         {
-            Debug.Log("itsa epty");
+            Debug.Log("there is no path");
         }
     }
 
@@ -53,8 +54,6 @@ public class Logic
             if (field[x2, y2] == -1) continue;
 
             if (end.x == x2 && end.y == y2) { Debug.Log("path = found"); }
-
-            if (start.x == x2 && start.y == y2) continue;
 
             field[x2, y2] = field[x, y] + 1;
             pToCheck.Enqueue(new Point(x2, y2));
