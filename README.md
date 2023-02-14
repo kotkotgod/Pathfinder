@@ -1,5 +1,5 @@
 # Pathfinder
- Visualizing simple algorithms with unity
+ Visualizing algorithms with unity
 
 Currently not even remotely done
 
